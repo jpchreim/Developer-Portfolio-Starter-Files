@@ -8,7 +8,8 @@ body {
 
 h1,
 h3,
-h5 {
+h5,
+.active {
     color: whitesmoke;
     font-family: Prata;
     font-weight: 400;
@@ -36,82 +37,72 @@ p {
     color: black !important;
     font-family: Prata;
     padding: 1rem 1.75rem;
-    font-size: 0.75em;
+    font-size: 0.75em !important; 
     background-color: #fbe850;
 }
 
-.allTheLinks {
+.topnav {
+    overflow: hidden;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    
-    width: 70%;
-    min-width: 300px;
-
-}
-.navigationBarSection{
     padding: 2% 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.navigationBarSection h5{
-    width: 30%;
-}
-.navigationBarSection ul {
-
-    display: flex;
-    justify-content: space-between;
-    min-width: 35%;
 }
 
-.navigationBarSection a {
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
-    color: darkgray;
-
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-.icon {
-    visibility: hidden;
-    position: absolute !important;
-    left: -1000px;
+
+.topnav .icon {
+    display: none;
 }
 
-@media screen and (max-width: 800px) {
-    .icon {
-        visibility: visible;
-        position: relative;
-        left: unset;
-        right: 8%;
-    }
 
-    .allTheLinks h3 {
-        visibility: visible !important;
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
         display: none;
     }
 
-    .allTheLinks a {
-        visibility: hidden;
-        position: absolute;
-        right: 0;
-        top: 0;
+    .topnav a.icon {
+        float: right;
+        display: block;
     }
-
-    .responsive {
+}
+.topnavResponsive{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 600px) {
+    .topnavResponsive{
+        width: 100%;
+    }
+    h3.active{
+        left: 8%;
+        top: 3%;
+    }
+    .topnav.topnav.responsive{
+        display: block;
         position: relative;
+        
     }
+  
 
-    .responsive ul {
+    .topnav.responsive a {
+        float: none;
         display: block;
-        width: 100%;
-    }
-
-    .responsive li {
-        display: block;
-        width: 100%;
+     
         text-align: center;
     }
 
-    .allTheLinks.getInTouchButton{
+    .topnav.responsive .getInTouchButton {
         display: block;
         color: black !important;
         font-family: Prata;
@@ -119,9 +110,8 @@ p {
         font-size: 0.75em;
         background-color: #fbe850;
     }
-   
-}
 
+}
 .titleSection {
     width: 45%;
     padding-left: 8%;
@@ -131,7 +121,6 @@ p {
 .titleSection h1 {
     font-size: 2.5em;
     margin-bottom: 0;
-
 }
 
 .titleSection p {
@@ -152,7 +141,6 @@ p {
     display: grid;
     grid-template-columns: 45% 45%;
     justify-content: space-between;
-
     padding-left: 8%;
     padding-right: 8%;
     padding-bottom: 5%;

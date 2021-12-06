@@ -9,40 +9,36 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Prata" />
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
+    <div class="topnav" id="myTopnav">
+        <div class="topnavResponsive">
+            <h3 class="active">Johanathan Specter</h3>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a id="firstGetInTouchButtonID" class="getInTouchButton">Get in touch</a>
 
-    <div class="navigationBarSection">
-        <h5 id="developerName">
-            Johanathan Specter
-        </h5>
-        <ul id="allTheLinks" class="allTheLinks">
-                <li>
-                    <a href="#articles">Articles</a>
-                </li>
-                <li>
-                    <a href="#chat">Chats</a>
-                </li>
-                <li>
-                    <a href="#Awards">Awards</a>
-                </li>
-                <li>
-                    <a href="#About">About</a>
-                </li>
-                <li>
-                    <a id="firstGetInTouchButtonID" class="getInTouchButton">Get in touch</a>
-                </li>
-        </ul>
-        <span class="fa fa-bars icon" onclick="myFunction()"></span>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+
     </div>
-
-    <script>
-
-    </script>
-
     <div class="titleSection">
         <h1 class="mainTitle">
             Helping companies build better, scalable software.
@@ -60,8 +56,6 @@
         <img src="\Assets\Logos\Tinder.svg" alt="Tinder">
         <img src="\Assets\Logos\Samsung.svg" alt="Samsung">
         <img src="\Assets\Logos\Verizon.svg" alt="Verizon">
-
-
     </div>
     <div class="section">
         <div class="column">
@@ -146,18 +140,3 @@
 </body>
 
 </html>
-
-<script>
-    function myFunction() {
-        var navigation = document.getElementById("allTheLinks");
-        var developerName = document.getElementById("developerName");
-        if (navigation.classList.contains("allTheLinks")) {
-            navigation.classList.remove("allTheLinks");
-            navigation.classList.add("responsive")
-        } else {
-            navigation.classList.add("allTheLinks");
-            navigation.classList.remove("responsive")
-        }
-        
-    }
-</script>
